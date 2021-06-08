@@ -1,20 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-const url = 'https://api.artic.edu/api/v1/artworks?limit=50';
 
 const Artworks = () => {
+    const [artworks, setData] = useState([]);
 
   useEffect(() => {
-    fetchData();
-  },[]);
-
-  const [artworks, setData] = useState([]); 
-
-  const fetchData = async () => {
-    const rawData = await fetch(url)
-    const artworks = await rawData.json()
-    setData(artworks.data);
-  }
+      fetch('http://localhost:3004/data')
+      .then(res => {
+          return res.json();
+      })
+      .then(data => {
+          setData(data);
+      });
+  }, []);
 
   return (
     
