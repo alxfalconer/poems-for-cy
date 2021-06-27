@@ -1,11 +1,10 @@
 import React from 'react';
-import phototwombly from "./images/phototwombly.jpg"
+import twomblyhome from "./images/twomblyhome.jpg"
 
 const Home = () => (
     <div>
-        <h1>Welcome to...</h1>
-        <a href="/premise">
-        <h3><img className="clickme" src={phototwombly} alt="clickme"/></h3>
+        <a href="/about">
+        <h3><img className="twomblyhome" src={twomblyhome} alt="twomblyhome"/></h3>
         </a>
     </div>
   ); 

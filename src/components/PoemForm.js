@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import User from './User';
 
 function PoemForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
@@ -24,6 +25,8 @@ function PoemForm(props) {
   };
 
   return (
+    <div>
+    {/* <User /> */}
     <form onSubmit={handleSubmit} className='poem-form'>
       {props.edit ? (
         <>
@@ -55,6 +58,7 @@ function PoemForm(props) {
         </>
       )}
     </form>
+    </div>
   );
 }
 

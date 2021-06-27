@@ -28,61 +28,6 @@ footer{
   list-style: none;
 }
 
-.logo{
-  height: 75px;
-  width: 75px;
-}
-
-.collector{
-  height: 100px;
-  width: 100px;
-}
-
-.collector2{
-  height: 400px;
-  width: 400px;
-}
-
-.image{
-  size: 1px;
-}
-
-.user-text{
-  padding: 100px;
-  margin-top: 50px;
-}
-
-.btn-primary{
-  padding: 50px;
-}
-
-image{
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-
-.submissions {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 80px 10px;
-}
-
-.submissions label {
-  text-align: left;
-  display: block;
-}
-
-.submissions input{
-  width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
-}
-
 .twombly1 {
   height: 600px;
   width: 600px;
@@ -99,11 +44,96 @@ image{
 }
 
 .twombly4 {
-  height: 500px;
-  width: 300px;
+  height: 650px;
+  width: 450px;
 }
 
 .twombly5 {
+  height: 521px;
+  width: 612px;
+}
 
+.twomblyhome {
+  height: 640px;
+  width: 808px;
+}
+
+.signature4 {
+  height: 39px;
+  width: 120px;
+  align-items: left;
+}
+
+.poem-form {
+  margin-bottom: 32px;
+}
+
+.poem-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #530000;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+}
+
+.poem-input::placeholder {
+  color: #e2e2e2;
+}
+
+.poem-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background:rgb(95, 0, 0) 0%;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.poem-input.edit {
+  border: 2px solid #149fff;
+}
+
+.poem-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+
+.poem-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.poem-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: rgb(0, 0, 0);
+  background: rgb(171, 255, 196) 0%;
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.poem-row:nth-child(4n + 1) {
+  background: rgb(255, 192, 236) 0%;
+}
+
+.poem-row:nth-child(4n + 2) {
+  background: rgb(165, 237, 255) 0%;
+}
+
+.poem-row:nth-child(4n + 3) {
+  background: rgb(255, 220, 179) 0%;
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PoemForm from './PoemForm';
+import Like from './Like';
 
 const Poem = ({ poems, completePoem, removePoem, updatePoem }) => {
   const [edit, setEdit] = useState({
@@ -34,6 +35,7 @@ const Poem = ({ poems, completePoem, removePoem, updatePoem }) => {
         <button
           onClick={() => setEdit({ id: poem.id, value: poem.text })}
           className='edit-icon'>Edit</button>
+        <Like />
       </div>
     </div>
   ));
