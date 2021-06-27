@@ -62,3 +62,48 @@ image{
   width: 100%;
 }
 
+.submissions {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 10px;
+}
+
+.submissions label {
+  text-align: left;
+  display: block;
+}
+
+.submissions input{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.twombly1 {
+  height: 600px;
+  width: 600px;
+}
+
+.twombly2 {
+  height: 600px;
+  width: 600px;
+}
+
+.twombly3 {
+  height: 500px;
+  width: 700px;
+}
+
+.twombly4 {
+  height: 500px;
+  width: 300px;
+}
+
+.twombly5 {
+
+}
+

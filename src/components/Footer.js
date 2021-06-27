@@ -3,17 +3,10 @@ import logo from "./logo.png"
 
 const Footer = () => {
 
-  const footerStyle = {
-    color: "white"
-  };
-
   return ( 
     <footer>
       <div>
-      <h4>Brought to you by A. Falconer and...</h4>
-      <a href="https://www.artic.edu/">
-      <h3><img className="logo" src={logo} alt="logo"/></h3>
-      </a>
+      <h4>Brought to you by Alexander Falconer</h4>
       </div>
     </footer>
   );
