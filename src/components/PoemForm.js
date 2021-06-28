@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import User from './User';
+import User from './User'
 
 function PoemForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
-
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -11,22 +10,30 @@ function PoemForm(props) {
   });
 
   const handleChange = e => {
+    e.preventDefault();
     setInput(e.target.value);
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-
+    setInput(e.target.value);
+    const text = { text: input};
+    
+    fetch("http://127.0.0.1:9393/poems", {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(text)
+  }).then(() => {
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
       text: input
     });
     setInput('');
-  };
+  })
+}
 
   return (
     <div>
-    {/* <User /> */}
     <form onSubmit={handleSubmit} className='poem-form'>
       {props.edit ? (
         <>

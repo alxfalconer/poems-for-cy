@@ -14,15 +14,12 @@ const Nav = () => {
          <a href="/">
       <h3><img className="signature4" src={signature4} alt="signature4"/></h3>
       </a>
-      <Link style={navStyle} to="/about">
-          <li>About</li>
-        </Link>
       <Link style={navStyle} to="/gallery">
           <li>Gallery</li>
         </Link>
-        {/* <Link style={navStyle} to="/premise">
-          <li>Premise</li>
-        </Link> */}
+      <Link style={navStyle} to="/about">
+          <li>About</li>
+        </Link>
       </ul>
     </nav>
   );

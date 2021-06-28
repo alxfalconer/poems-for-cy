@@ -57,16 +57,16 @@ class App
     elsif req.path.match(/poems/)
       if req.env["REQUEST_METHOD"] == "GET"
         if req.path.split("/poems").length == 0 
-          reviews = Poem.all
+          poems = Poem.all
           return [200, {'Content-Type' => 'application/json'}, [poems.to_json]]       
         else
-           review_id = req.path.split("/poems/")[1].to_i
-          found_review = Poem.find_by(id: poem_id)
+           poem_id = req.path.split("/poems/")[1].to_i
+          found_poem= Poem.find_by(id: poem_id)
           return [200, {'Content-Type' => 'application/json'}, [found_poem.to_json]] 
         end
       elsif req.env["REQUEST_METHOD"] == "POST"
         form_data = JSON.parse(req.body.read) 
-        new_poem = Review.create(text: form_data["text"])
+        new_poem = Poem.create(text: form_data["text"])
         return [200, {'Content-Type' => 'application/json'}, [new_poem.to_json]]
       elsif req.env["REQUEST_METHOD"] == "DELETE"
         #  binding.pry
@@ -74,13 +74,32 @@ class App
           Poem.find(id).delete
           return[200, { 'Content-Type' => 'application/json'}, [{:message => "Poem deleted"}.to_json]]
         
+      end
+    elsif req.path.match(/likes/)
+      if req.env["REQUEST_METHOD"] == "GET"
+        if req.path.split("/likes").length == 0 
+          likes = Like.all
+          return [200, {'Content-Type' => 'application/json'}, [likes.to_json]]       
+        else
+           like_id = req.path.split("/likes/")[1].to_i
+          found_like= Like.find_by(id: like_id)
+          return [200, {'Content-Type' => 'application/json'}, [found_like.to_json]] 
+        end
+      elsif req.env["REQUEST_METHOD"] == "POST"
+        form_data = JSON.parse(req.body.read) 
+        new_like = Like.create(text: form_data["text"])
+        return [200, {'Content-Type' => 'application/json'}, [new_like.to_json]]
+      elsif req.env["REQUEST_METHOD"] == "DELETE"
+        #  binding.pry
+          id = req.path.split("/likes/").last
+          Like.find(id).delete
+          return[200, { 'Content-Type' => 'application/json'}, [{:message => "Like deleted"}.to_json]]
+        
       end  
     
 
-
-
     else
-      resp.write "Path Not Found"
+      resp.write "Sup Bud"
 
     end
 

@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2021_06_21_210721) do
 
+  create_table "likes", force: :cascade do |t|
+    t.integer "count"
+    t.string "text"
+    t.integer "poem_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "paintings", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -20,7 +28,9 @@ ActiveRecord::Schema.define(version: 2021_06_21_210721) do
 
   create_table "poems", force: :cascade do |t|
     t.string "text"
-    t.integer "album_id"
+    t.integer "like_count"
+    t.string "username_name"
+    t.integer "painting_id"
     t.integer "username_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

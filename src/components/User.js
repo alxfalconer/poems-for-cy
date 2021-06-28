@@ -1,32 +1,30 @@
 import React, { useState } from "react";
-import {useHistory} from "react-router-dom";
 
 function User() {
-  const [username, setUsername] = useState("");
-  const newUser = useHistory();
+  const [username_name, setUsername] = useState('');
 
-  const User = () => {
-    const data = { username: username};
-    fetch("http://localhost:3001/auth/login", {
+  const userSubmit = (e) => {
+      e.preventDefault();
+    const data = { "name": username_name};
+    fetch("http://127.0.0.1:9393/usernames", {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)
   }).then(() => {
-      newUser.push(``)
-
+    setUsername('');
     });
   };
   return (
     <div className="loginContainer">
-      <label>Username:</label>
-      <input
-        type="text"
-        onChange={(event) => {
-          setUsername(event.target.value);
-        }}
-      />
-
-      <button onClick={User}> Add username </button>
+      <form onSubmit={userSubmit}>
+                <input placeholder="Enter your username"
+                type="text"
+                required
+                value={username_name}
+                onChange={(e) => setUsername(e.target.value)}
+                />
+                <button onClick={userSubmit}>Add</button>
+                </form>
     </div>
   );
 }

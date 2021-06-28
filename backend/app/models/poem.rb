@@ -1,5 +1,5 @@
 class Poem < ActiveRecord::Base
-	belongs_to :user
-	belongs_to :painting
+	belongs_to :username
+	has_many :likes
 	
 end

@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import PoemForm from './PoemForm';
 import Like from './Like';
 
-const Poem = ({ poems, completePoem, removePoem, updatePoem }) => {
+function Poem({ poems, readPoem, removePoem, updatePoem }) {
   const [edit, setEdit] = useState({
     id: null,
     value: ''
   });
+  
 
   const submitUpdate = value => {
     updatePoem(edit.id, value);
@@ -15,6 +16,7 @@ const Poem = ({ poems, completePoem, removePoem, updatePoem }) => {
       value: ''
     });
   };
+
 
   if (edit.id) {
     return <PoemForm edit={edit} onSubmit={submitUpdate} />;
@@ -25,7 +27,7 @@ const Poem = ({ poems, completePoem, removePoem, updatePoem }) => {
       className={poem.isComplete ? 'poem-row complete' : 'poem-row'}
       key={index}
     >
-      <div key={poem.id} onClick={() => completePoem(poem.id)}>
+      <div key={poem.id} onClick={() => readPoem(poem.id)}>
         {poem.text}
       </div>
       <div className='icons'>

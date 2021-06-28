@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PoemForm from './PoemForm';
+import User from './User';
 import Poem from './Poem';
+
 
 function PoemList() {
   const [poems, setPoems] = useState([]);
@@ -10,10 +12,10 @@ function PoemList() {
       return;
     }
 
+
     const newPoems = [poem, ...poems];
 
     setPoems(newPoems);
-    console.log(...poems);
   };
 
   const updatePoem = (poemId, newValue) => {
@@ -42,6 +44,8 @@ function PoemList() {
 
   return (
     <>
+    <br></br>
+    <User />
       <PoemForm onSubmit={addPoem} />
       <Poem
         poems={poems}

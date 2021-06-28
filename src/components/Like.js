@@ -6,9 +6,21 @@ const Like = () => {
         return setCounter(counter+1);
     };
 
+    const likeSubmit = (e) => {
+        e.preventDefault();
+      const data = { "likes": (counter+1)};
+      fetch("http://127.0.0.1:9393/poems", {
+          method: 'POST',
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(data)
+    }).then(() => {
+      newCounter('');
+      });
+    };
+
     return (
         <div>
-            <button onClick={newCounter}>Like: {counter}</button>
+            <button onClick={likeSubmit}>Like: {counter}</button>
         </div>
     )
 
