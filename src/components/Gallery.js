@@ -4,7 +4,9 @@ import twombly1 from "./images/twombly1.jpeg";
 import twombly2 from "./images/twombly2.jpeg";
 import twombly3 from "./images/twombly3.jpeg";
 import twombly4 from "./images/twombly4.jpeg";
-import twombly5 from "./images/twombly5.jpeg";
+import twombly5 from "./images/twombly4.jpeg";
+
+const images = (twombly1, twombly2, twombly3, twombly4, twombly5)
 
 const Gallery = () => (
     <div>

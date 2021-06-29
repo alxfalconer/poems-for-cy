@@ -12,9 +12,7 @@ function PoemList() {
       return;
     }
 
-
-    const newPoems = [poem, ...poems];
-
+    const newPoems = [...poems, poem];
     setPoems(newPoems);
   };
 
@@ -23,7 +21,7 @@ function PoemList() {
       return
     }
 
-    setPoems(prev => prev.map(item => (item.id ===poemId ? newValue : item)));
+    setPoems(prev => prev.map(poem => (poem.id ===poemId ? newValue : poem)));
   };
 
   const removePoem = id => {
@@ -34,9 +32,6 @@ function PoemList() {
 
   const completePoem = id => {
     let updatedPoems = poems.map(poem => {
-      if (poem.id === id) {
-        poem.isComplete = !poem.isComplete;
-      }
       return poem;
     });
     setPoems(updatedPoems);

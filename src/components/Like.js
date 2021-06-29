@@ -8,8 +8,8 @@ const Like = () => {
 
     const likeSubmit = (e) => {
         e.preventDefault();
-      const data = { "likes": (counter+1)};
-      fetch("http://127.0.0.1:9393/poems", {
+      const data = { "count": (counter+1)};
+      fetch("http://127.0.0.1:9393/likes", {
           method: 'POST',
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify(data)
