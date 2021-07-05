@@ -8,7 +8,6 @@ function Poem({ poems, readPoem, removePoem, updatePoem }) {
     value: ''
   });
   
-
   const submitUpdate = value => {
     updatePoem(edit.id, value);
     setEdit({
