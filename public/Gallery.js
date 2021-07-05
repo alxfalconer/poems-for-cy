@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import PoemList from './PoemList'
+import PoemList from '../src/components/PoemList'
 import twombly1 from "./images/twombly1.jpeg";
 import twombly2 from "./images/twombly2.jpeg";
 import twombly3 from "./images/twombly3.jpeg";

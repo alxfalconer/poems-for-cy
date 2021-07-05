@@ -29,13 +29,13 @@ function Poem({ poems, readPoem, removePoem, updatePoem }) {
       <div key={poem.id} onClick={() => readPoem(poem.id)}>
         {poem.text}
       </div>
-      <div>
+      <div className='icons'>
         <button
           onClick={() => removePoem(poem.id)}
-          >Delete</button>
+          className='delete-icon'>Delete</button>
         <button
           onClick={() => setEdit({ id: poem.id, value: poem.text })}
-          >Edit</button>
+          className='edit-icon'>Edit</button>
         <Like />
       </div>
     </div>

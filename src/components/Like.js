@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 
 const Like = () => {
-    const [counter, setCounter] = useState(0)
+    const [counter_count, setCounter] = useState(0)
     const newCounter = () => {
-        return setCounter(counter+1);
+        return setCounter(counter_count+1);
     };
 
     const likeSubmit = (e) => {
         e.preventDefault();
-      const data = { "count": (counter+1)};
+      const data = { "count": (counter_count+1)};
       fetch("http://127.0.0.1:9393/likes", {
           method: 'POST',
           headers: {"Content-Type": "application/json"},
@@ -20,7 +20,14 @@ const Like = () => {
 
     return (
         <div>
-            <button onClick={likeSubmit}>Like: {counter}</button>
+            <form onSubmit={likeSubmit}
+                
+                required
+                value={counter_count+1}
+                onChange={(e) => newCounter(e.target.value)}>
+                    <button onClick={likeSubmit}>Like: {counter_count}</button>
+                </form>
+              
         </div>
     )
 
