@@ -8,18 +8,17 @@ function PoemList() {
   const [poems, setPoems] = useState([]);
 
   const addPoem = poem => {
-    if (!poem.text || /^\s*$/.test(poem.text)) {
+    if (poem.text != poem.text) 
       return;
-    }
-
+    
     const newPoems = [...poems, poem];
+
     setPoems(newPoems);
   };
 
   const updatePoem = (poemId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return
-    }
+    if (newValue.text != newValue.text)
+      return;
 
     setPoems(prev => prev.map(poem => (poem.id ===poemId ? newValue : poem)));
   };

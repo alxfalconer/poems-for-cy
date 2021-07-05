@@ -1,13 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 
 function PoemForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
-
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    inputRef.current.focus();
-  });
 
 
   const handleChange = e => {
@@ -43,7 +37,6 @@ function PoemForm(props) {
             value={input}
             onChange={handleChange}
             name='text'
-            ref={inputRef}
             className='poem-input edit'
           />
           <button onClick={handleSubmit} className='poem-button edit'>
@@ -57,7 +50,6 @@ function PoemForm(props) {
             value={input}
             onChange={handleChange}
             name='text'
-            ref={inputRef}
             className='poem-input'
           />
           <button onClick={handleSubmit} className='poem-button'>

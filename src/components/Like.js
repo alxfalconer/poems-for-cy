@@ -24,6 +24,7 @@ const Like = () => {
                 
                 required
                 value={counter_count+1}
+                name = 'count'
                 onChange={(e) => newCounter(e.target.value)}>
                     <button onClick={likeSubmit}>Like: {counter_count}</button>
                 </form>
