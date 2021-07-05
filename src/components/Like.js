@@ -8,13 +8,13 @@ const Like = () => {
 
     const likeSubmit = (e) => {
         e.preventDefault();
-      const data = { "count": (counter_count+1)};
+      const data = { "count": (newCounter)};
       fetch("http://127.0.0.1:9393/likes", {
           method: 'POST',
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify(data)
     }).then(() => {
-      newCounter('');
+      newCounter(data);
       });
     };
 
@@ -23,7 +23,7 @@ const Like = () => {
             <form onSubmit={likeSubmit}
                 
                 required
-                value={counter_count+1}
+                value={newCounter}
                 name = 'count'
                 onChange={(e) => newCounter(e.target.value)}>
                     <button onClick={likeSubmit}>Like: {counter_count}</button>

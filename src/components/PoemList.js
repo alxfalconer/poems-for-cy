@@ -8,24 +8,16 @@ function PoemList() {
   const [poems, setPoems] = useState([]);
 
   const addPoem = poem => {
-    if (poem.text != poem.text) 
-      return;
-    
     const newPoems = [...poems, poem];
-
     setPoems(newPoems);
   };
 
   const updatePoem = (poemId, newValue) => {
-    if (newValue.text != newValue.text)
-      return;
-
     setPoems(prev => prev.map(poem => (poem.id ===poemId ? newValue : poem)));
   };
 
   const removePoem = id => {
     const removedArr = [...poems].filter(poem => poem.id !== id);
-
     setPoems(removedArr);
   };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 
 function PoemForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
