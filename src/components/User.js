@@ -21,8 +21,7 @@ function User() {
                 type="text"
                 required
                 value={username_name}
-                onChange={(e) => setUsername(e.target.value)}
-                />
+                onChange={(e) => setUsername(e.target.value)}/>
                 <button onClick={userSubmit}>Submit</button>
                 </form>
     </div>

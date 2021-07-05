@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PoemList from './PoemList'
 
-function Gallery2() {
+function Gallery() {
 
   useEffect(() => {
       fetchData();
@@ -42,4 +42,4 @@ return (
   );
 }
 
-  export default Gallery2;
+  export default Gallery;
