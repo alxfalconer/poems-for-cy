@@ -3,41 +3,40 @@ import PoemForm from './PoemForm';
 import User from './User';
 import Poem from './Poem';
 
-
 function PoemList() {
   const [poems, setPoems] = useState([]);
 
-  const addPoem = poem => {
+  const createPoem = poem => {
     const newPoems = [...poems, poem];
     setPoems(newPoems);
   };
 
-  const updatePoem = (poemId, newValue) => {
-    setPoems(prev => prev.map(poem => (poem.id ===poemId ? newValue : poem)));
-  };
-
-  const removePoem = id => {
-    const removedArr = [...poems].filter(poem => poem.id !== id);
-    setPoems(removedArr);
-  };
-
-  const completePoem = id => {
+  const readPoem = () => {
     let updatedPoems = poems.map(poem => {
       return poem;
     });
     setPoems(updatedPoems);
   };
 
+  const updatePoem = (poemId, newValue) => {
+    setPoems(prev => prev.map(poem => (poem.id ===poemId ? newValue : poem)));
+  };
+
+  const deletePoem = id => {
+    const deleteArr = [...poems].filter(poem => poem.id !== id);
+    setPoems(deleteArr);
+  };
+
   return (
     <>
     <br></br>
     <User />
-      <PoemForm onSubmit={addPoem} />
+      <PoemForm onSubmit={createPoem} />
       <Poem
         poems={poems}
-        completePoem={completePoem}
-        removePoem={removePoem}
+        readPoem={readPoem}
         updatePoem={updatePoem}
+        deletePoem={deletePoem}
       />
     </>
   );

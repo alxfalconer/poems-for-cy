@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+const url = "http://127.0.0.1:9393/"
 
 function PoemForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
-
 
   const handleChange = e => {
     e.preventDefault();
@@ -14,7 +14,7 @@ function PoemForm(props) {
     setInput(e.target.value);
     const text = { text: input};
     
-    fetch("http://127.0.0.1:9393/poems", {
+    fetch(url + "poems", {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(text)

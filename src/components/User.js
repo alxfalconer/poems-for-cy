@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const url = "http://127.0.0.1:9393/"
 
 function User() {
   const [username_name, setUsername] = useState('');
@@ -6,7 +7,7 @@ function User() {
   const userSubmit = (e) => {
       e.preventDefault();
     const data = { "name": username_name};
-    fetch("http://127.0.0.1:9393/usernames", {
+    fetch(url + "usernames", {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)

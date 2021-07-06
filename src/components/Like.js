@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+const url = "http://127.0.0.1:9393/"
 
 const Like = () => {
     const [counter_count, setCounter] = useState(0)
@@ -8,8 +9,8 @@ const Like = () => {
 
     const likeSubmit = (e) => {
         e.preventDefault();
-      const data = { "count": (newCounter)};
-      fetch("http://127.0.0.1:9393/likes", {
+      const data = { "count": (counter_count)};
+      fetch(url + "likes", {
           method: 'POST',
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify(data)

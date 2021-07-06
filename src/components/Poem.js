@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PoemForm from './PoemForm';
 import Like from './Like';
 
-function Poem({ poems, readPoem, removePoem, updatePoem }) {
+function Poem({ poems, readPoem, updatePoem, deletePoem }) {
   const [edit, setEdit] = useState({
     id: null,
     value: ''
@@ -16,22 +16,18 @@ function Poem({ poems, readPoem, removePoem, updatePoem }) {
     });
   };
 
-
   if (edit.id) {
     return <PoemForm edit={edit} onSubmit={submitUpdate} />;
   }
 
   return poems.map((poem, index) => (
-    <div
-      className={poem.isComplete ? 'poem-row complete' : 'poem-row'}
-      key={index}
-    >
+    <div className='poem-row' key={index}>
       <div key={poem.id} onClick={() => readPoem(poem.id)}>
         {poem.text}
       </div>
       <div>
         <button
-          onClick={() => removePoem(poem.id)}
+          onClick={() => deletePoem(poem.id)}
           >Delete</button>
         <button
           onClick={() => setEdit({ id: poem.id, value: poem.text })}
