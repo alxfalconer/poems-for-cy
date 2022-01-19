@@ -2,7 +2,7 @@ import React from 'react';
 import twomblyhome from "./images/twomblyhome.jpg"
 
 const Home = () => (
-    <div>
+    <div className="background" >
         <a href="/gallery">
         <h3><img className="twomblyhome" src={twomblyhome} alt="twomblyhome"/></h3>
         </a>

@@ -5,6 +5,7 @@ import signature4 from './images/signature4.jpg'
 const Nav = () => {
 
   return ( 
+    <div className="nav">
     <nav>
       <ul className="nav-links">
          <a href="/">
@@ -15,6 +16,7 @@ const Nav = () => {
         </Link>
       </ul>
     </nav>
+    </div>
   );
 }
 
