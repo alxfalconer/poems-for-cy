@@ -6,7 +6,6 @@ function PoemForm2(props) {
 
 //   [props.edit ? props.edit.value : '']
 
-
   const getInput = e => {
     e.preventDefault();
     setInput(e.target.value);
