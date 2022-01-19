@@ -13,6 +13,8 @@ const Home = () => (
         Users can build on eachother's lines, creating a confluence of varying perspectives and styles.
         The artworks have been pulled from the Art Institute of Chicago and presented without context in order to ensure complete creative freedom for our poets.
         Click the image above to enter the gallery and get started.</p>
+        <br></br>
+        <br></br>
         
     </div>
   ); 

@@ -31,7 +31,7 @@ body {
 }
 
 .poem-input::placeholder {
-  color: #e2e2e2;
+  color: #000000;
 }
 
 .poem-button {
@@ -114,7 +114,7 @@ footer{
   width: 550px;
 }
 
-.background {
+/* .background {
   background-image: url(https://sothebys-com.brightspotcdn.com/dims4/default/7444d5e/2147483647/strip/true/crop/3000x2119+0+0/resize/1154x815!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2F49%2F0b%2Ffa0e48af458281d2141d7aa1d869%2Fmilan-twombly-1.jpg);
   background-position: center;
   background-size: cover;
@@ -123,7 +123,7 @@ footer{
   margin-top: 100px;
   margin-bottom: 100px;
   padding: 50px;
-}
+} */
 
 .nav{
   display: flex;
