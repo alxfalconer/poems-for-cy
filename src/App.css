@@ -1,23 +1,5 @@
-.App {
-  text-align: center;
-}
-
-nav{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background: rgb(19, 20, 20);
-  color: white;
-}
-
-footer{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 7vh;
-  background: rgb(19, 20, 20);
-  color: white;
+body {
+  background-color: #faf5ce !important;
 }
 
 .nav-links{
@@ -103,10 +85,16 @@ footer{
   width: 75px;
 }
 
+.App {
+  font-family: Optima, sans-serif;
+  text-align: center;
+}
+
 #viewerContainer {
-  background-color: #ffffff;
-  border: 5px solid #ccc9ca;
-  height: 430px;
+  background-color: #530000;
+  color: white;
+  border: 2px solid #000000;
+  height: 150px;
   width: 750px;
   margin: 0 auto;
   text-align: center;
@@ -122,8 +110,8 @@ footer{
 }
 
 .twomblyhome {
-  height: 600px;
-  width: 750px;
+  height: 400px;
+  width: 550px;
 }
 
 .background {
