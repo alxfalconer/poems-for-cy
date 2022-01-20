@@ -1,4 +1,4 @@
-# Thi fil i aut-generate fro th current state of the database. Instead
+# Thi fil i aut-generate fro th curren state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
